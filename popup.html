@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="css/style.css"/>
+
+	<script data-tmpl type="jquery/template">
+		{{#items}}
+			<tr>
+				<th>{{label}}</th>
+				<td><textarea col="20" row="5">{{data1}}</textarea></td>
+				<td><textarea col="20" row="5">{{data2}}</textarea></td>
+				<td>{{diff}}</td>
+			</tr>
+		{{/items}}
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<ul class="m-list-form">
+			<li>
+				<label>対象のフォームセレクタ（例: #entry_form）</label>
+				<input type="text" name="targetform" id="targetform" class="js-storage" value="#entry_form">
+
+				<label>比較元URL</label>
+				<input type="text" name="url1" id="url1" class="js-storage">
+
+				<label>比較先URL</label>
+				<input type="text" name="url2" id="url2" class="js-storage">
+			</li>
+			<li>
+				<button id="check">比較</button>
+			</li>
+			<li>
+				<label>比較結果</label>
+				<table id="table">
+					<thead>
+						<tr>
+							<th style="width: 15%">項目</th>
+							<th style="width: 35%">比較元</th>
+							<th style="width: 35%">比較先</th>
+							<th>結果</th>
+						</tr>
+					</thead>
+					<tbody>
+
+					</tbody>
+				</table>
+			</li>
+		</ul>
+	</div>
+
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/mustache.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
